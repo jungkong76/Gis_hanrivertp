@@ -20,9 +20,6 @@ https://youtu.be/mMZoTXK4xR4
   <li>팀원4 : UI 및 디자인 </li>
   <br><br>
 
-<img src="https://github.com/jungkong76/OMZTeam2023/assets/145302179/390e617c-891f-4abf-841f-884f85d7e0f2"/>
-<br><br>
-
 <h2>사용 기술</h2>
 <ul>
 <li>Frontend: Javascript, jQuery(3.3.1), AJAX, OpenLayers, HTML/CSS, Bootstrap(5.3.1)</li>
