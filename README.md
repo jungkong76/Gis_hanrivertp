@@ -20,7 +20,7 @@ https://youtu.be/mMZoTXK4xR4
   <li>팀원4 : UI 및 디자인 </li>
   </ul>
 </ul>
-  <br><br>
+  <br>
 <h2>사용 기술</h2>
 <ul>
 <li>Frontend: Javascript, jQuery(3.3.1), AJAX, OpenLayers, HTML/CSS, Bootstrap(5.3.1)</li>
@@ -29,7 +29,7 @@ https://youtu.be/mMZoTXK4xR4
 <li>Development Tool:	전자정부프레임워크</li>
 <li>API: 한강 수문통제소 오픈 API, Simple & Easy Notification Service (Naver Cloud Platform)</li>
 </ul>
-<br><br>
+<br>
 
 <h2>프로젝트 수행 이유 및 목적</h2>
 <ul>
