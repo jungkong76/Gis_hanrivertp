@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>용수 사용 결재함</title>
+</head>
+<body>
+<h2>결재함</h2>
+<table border="1">
+<tr><th>접수 번호</th><th>하천명</th><th>취수 위치</th><th>작성자</th><th>작성일자</th><th>용도</th></tr>
+<tr th:if="${!#lists.isEmpty(list)}" th:each = "com : ${list}">
+<td th:text="${com.a_no}" id = "a_no"></td>
+<td><a th:href="@{/approval/read(a_no=${com.a_no})}" th:text="${com.r_name}"></a></td>
+<td th:text="${com.a_place}"></td>
+<td th:text="${com.a_name}" id = "a_name"></td>
+<td th:text="${com.regDate}"></td>
+<td th:text="${com.a_purpose}"></td>
+</tr>
+<tr th:if="${#lists.isEmpty(list)}"><td colspan="6">결재할 내역이 없습니다.</td></tr>
+</table>
+<ul class="pagination pagination-sm" th:if="${total_count}>0" style="justify-content : center;">
+    <li th:classappend="${endPage < 6} ? 'page-item disabled' : 'page-item'">
+        <a class="page-link" th:href="@{/approval/inbox(r_code=${r_code == null? 999 : r_code}, pageNum=${startPage-5}, startPage=${startPage-5})}"><<</a>
+    </li>
+    <li th:each="i:${#numbers.sequence(startPage, endPage)}" th:classappend="${pageNum == i} ? 'page-item active' : 'page-item'">
+        <a th:href="@{/approval/inbox(pageNum=${i}, startPage=${startPage})}" class="page-link">[[${i}]]</a></li>
+    <li th:classappend="${endPage == total_page} ? 'page-item disabled' : 'page-item'">
+        <a class="page-link" th:href="@{/approval/inbox(pageNum=${endPage+1}, startPage = ${endPage+1})}">>></a>
+    </li>
+</ul>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script th:src="@{/js/approval/inbox.js}"></script>
+</html>

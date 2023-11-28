@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>용수 사용 신청</title>
+</head>
+<body>
+<h2>용수 사용 신청</h2>
+<form action = "/approval/search" method="get">
+<select id = "river" name = "r_code">
+<option value ="999">---------선택---------</option>
+</select>
+<input type="date" id = "date1" name = "startDate" th:value = "${startDate}"> ~ <input type="date" id = "date2" name = "endDate">
+<select id = "period">
+<option value = "999">기간</option>
+<option value = "7">1주</option>
+<option value = "30">1개월</option>
+<option value = "90">3개월</option>
+<option value = "180">6개월</option>
+</select>
+<input type="hidden" name = "pageNum">
+<input type="hidden" th:value="${startPage}" name = "startPage">
+<input type="submit" value="검색">
+</form>
+<table border="1">
+<tr><th>접수 번호</th><th>하천명</th><th>취수 위치</th><th>작성자</th><th>작성일자</th><th>상태</th></tr>
+<tr th:if="${!#lists.isEmpty(list)}" th:each = "com : ${list}">
+<td th:text="${com.a_no}" id = "a_no"></td>
+<td><a th:href="@{/approval/read(a_no=${com.a_no})}" th:text="${com.r_name}"></a></td>
+<td th:text="${com.a_place}"></td>
+<td th:text="${com.a_name}" id = "a_name"></td>
+<td th:text="${com.regDate}"></td>
+<td th:text="${com.a_status}" id = "status"></td>
+</tr>
+<tr th:if="${#lists.isEmpty(list)}"><td colspan="6">검색 결과가 없습니다.</td></tr>
+</table>
+<a href="/approval/inbox"><button>결재함</button></a><button onclick="usageCheck()">용수 사용 현황</button>
+<ul class="pagination pagination-sm" th:if="${total_count}>0" style="justify-content : center;">
+    <li th:classappend="${endPage < 6} ? 'page-item disabled' : 'page-item'">
+        <a class="page-link" th:href="@{/approval/search(r_code=${r_code == null? 999 : r_code}, pageNum=${startPage-5}, startPage=${startPage-5}, startDate=${startDate}, endDate=${endDate})}"><<</a>
+    </li>
+    <li th:each="i:${#numbers.sequence(startPage, endPage)}" th:classappend="${pageNum == i} ? 'page-item active' : 'page-item'">
+        <a th:href="@{/approval/search(r_code=${r_code == null? 999 : r_code}, pageNum=${i}, startPage=${startPage}, startDate=${startDate}, endDate=${endDate})}" class="page-link">[[${i}]]</a></li>
+    <li th:classappend="${endPage == total_page} ? 'page-item disabled' : 'page-item'">
+        <a class="page-link" th:href="@{/approval/search(r_code=${r_code == null? 999 : r_code}, pageNum=${endPage+1}, startPage = ${endPage+1}, startDate=${startDate}, endDate=${endDate})}">>></a>
+    </li>
+</ul>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script th:src="@{/js/approval/main.js}"></script>
+<script th:inline = "javascript">
+let select = document.getElementById('river');
+
+let river = /*[[${riverList}]]*/ null;
+
+let r_code = /*[[${r_code}]]*/ null;
+
+for (let i = 0; i < river.length; i++) {
+	let option = document.createElement('option');
+	option.value = river[i].r_code;
+	if(option.value == r_code){
+		option.selected = true;
+	}
+	option.textContent = river[i].r_name;
+	select.appendChild(option);
+}
+</script>
+</html>
