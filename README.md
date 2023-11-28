@@ -1,4 +1,4 @@
-<h1>한강 수자원 관리 시스템</h1><br>
+<h1>한강 수자원 관리 종합 플랫폼</h1><br>
 <img src="https://github.com/jungkong76/Gis_hanrivertp/assets/145302179/821f3d77-95f1-4129-8f37-e962342bce5a"/>
 
 <h2>시연 동영상</h2>
