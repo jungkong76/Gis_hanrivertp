@@ -33,7 +33,7 @@ https://youtu.be/mMZoTXK4xR4
 
 <h2>프로젝트 수행 이유 및 목적</h2>
 <ul>
-  <li>중앙정보기술인재개발원 <strong>[프로젝트 기반 자바(JAVA) 응용 SW 개발자 취업과정]</strong> '선도소프트' 기업 연계 팀프로젝트</li>
+  <li>중앙정보기술인재개발원 <strong>[프로젝트 기반 자바(JAVA) 응용 SW 개발자 취업과정]</strong> 기업 연계 팀프로젝트</li>
 </ul>
 <br><br>
 
