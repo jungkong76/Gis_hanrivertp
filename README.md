@@ -19,7 +19,6 @@ https://youtu.be/mMZoTXK4xR4
   <li>팀원3 : 로그인, 관리자 등록 | 공지사항</li>
   <li>팀원4 : UI 및 디자인 </li>
   <br><br>
-
 <h2>사용 기술</h2>
 <ul>
 <li>Frontend: Javascript, jQuery(3.3.1), AJAX, OpenLayers, HTML/CSS, Bootstrap(5.3.1)</li>
