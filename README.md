@@ -3,7 +3,6 @@
 
 <h2>시연 동영상</h2>
 https://youtu.be/mMZoTXK4xR4
-
 <br/>
 
 <h2>프로젝트 개요</h2>
