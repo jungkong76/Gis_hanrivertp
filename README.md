@@ -52,4 +52,12 @@ https://youtu.be/mMZoTXK4xR4
   </ol>
 <br><br>
 
+<h2>PPT</h2>
+<img src="https://github.com/jungkong76/Gis_hanrivertp/assets/145302179/a653da7f-0fd0-49bc-9458-05434b1abb98">
+<img src="https://github.com/jungkong76/Gis_hanrivertp/assets/145302179/4753844d-d6f0-4315-a2d8-ee071459448a">
+<img src="https://github.com/jungkong76/Gis_hanrivertp/assets/145302179/837ce84d-3ec0-46ab-834b-df78dadd082c">
+
+
+
+
 
