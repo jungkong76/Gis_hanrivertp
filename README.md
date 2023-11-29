@@ -23,10 +23,10 @@ https://youtu.be/mMZoTXK4xR4
   <br>
 <h2>사용 기술</h2>
 <ul>
-<li>Frontend: Javascript, jQuery(3.3.1), AJAX, OpenLayers, HTML/CSS, Bootstrap(5.3.1)</li>
+<li>Frontend: Javascript(ES6), jQuery(3.3.1), AJAX, OpenLayers, GeoServer, HTML/CSS, Bootstrap(5.3.1)</li>
 <li>Backend: Java(11), Spring Boot(2.7.15), JPA(2.1), Thymeleaf(3.0.4)</li>
-<li>Database: PostgreSQL</li>
-<li>Development Tool:	전자정부프레임워크</li>
+<li>Database: PostgreSQL(16.1)</li>
+<li>Development Tool:	전자정부프레임워크(4.1.0)</li>
 <li>API: 한강 수문통제소 오픈 API, Simple & Easy Notification Service (Naver Cloud Platform)</li>
 </ul>
 <br>
